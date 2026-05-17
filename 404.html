@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Page Not Found | PomPom Hub</title>
+  <meta name="robots" content="noindex, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--rose:#ff2d6b;--rose2:#ff6a95;--gold:#ffd166;--text:#f0eaff;--muted:#9993b0}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;overflow:hidden}
+    .bg-orb{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none}
+    .orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(255,45,107,0.12),transparent 70%);top:-20%;left:-15%}
+    .orb2{width:400px;height:400px;background:radial-gradient(circle,rgba(123,94,167,0.1),transparent 70%);bottom:0;right:-10%}
+    .num{font-family:'Playfair Display',serif;font-size:clamp(8rem,20vw,14rem);font-weight:900;line-height:1;background:linear-gradient(135deg,var(--rose),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:900;margin-bottom:1rem}
+    p{color:var(--muted);max-width:450px;line-height:1.7;margin-bottom:2.5rem}
+    .actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+    .btn-p{background:linear-gradient(135deg,var(--rose),#c4004f);color:#fff;text-decoration:none;padding:0.9rem 2rem;border-radius:50px;font-weight:500;box-shadow:0 4px 30px rgba(255,45,107,0.35);transition:all 0.3s}
+    .btn-p:hover{transform:translateY(-3px)}
+    .btn-s{border:1px solid rgba(255,45,107,0.35);color:var(--rose2);text-decoration:none;padding:0.9rem 2rem;border-radius:50px;transition:all 0.3s}
+    .btn-s:hover{background:rgba(255,45,107,0.1)}
+    .logo{position:fixed;top:1.5rem;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--rose),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+  </style>
+</head>
+<body>
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+<a href="/" class="logo">PomPom Hub</a>
+<div class="num">404</div>
+<h1>Page Not Found</h1>
+<p>Oops! The page you're looking for doesn't exist on PomPom Hub. Head back home or go directly to the main site.</p>
+<div class="actions">
+  <a href="/" class="btn-p">← Back to Home</a>
+  <a href="https://pompomhub.com" class="btn-s" rel="noopener">Visit PomPom Hub →</a>
+</div>
+</body>
+</html>

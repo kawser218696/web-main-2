@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PomPom Hub – Your Ultimate Entertainment Destination</title>
+  <meta name="description" content="PomPom Hub is your ultimate online entertainment destination. Discover trending content, exclusive videos, and top-rated entertainment all in one place. Visit PomPom Hub now!" />
+  <meta name="keywords" content="pompom hub, pompomhub, pom pom hub, entertainment hub, trending videos, online entertainment, best entertainment site, pompomhub.com, pompom hub online, top entertainment, video hub, content hub, premium entertainment, watch online, free entertainment, viral videos, popular content" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="PomPom Hub" />
+  <link rel="canonical" href="https://pompomhub.online/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PomPom Hub – Your Ultimate Entertainment Destination" />
+  <meta property="og:description" content="Discover trending content, exclusive videos, and top-rated entertainment at PomPom Hub. The best entertainment hub online." />
+  <meta property="og:url" content="https://pompomhub.online/" />
+  <meta property="og:site_name" content="PomPom Hub" />
+  <meta property="og:image" content="https://pompomhub.online/assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PomPom Hub – Your Ultimate Entertainment Destination" />
+  <meta name="twitter:description" content="Discover trending content and exclusive entertainment at PomPom Hub." />
+  <meta name="twitter:image" content="https://pompomhub.online/assets/og-image.jpg" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PomPom Hub",
+    "url": "https://pompomhub.online",
+    "description": "PomPom Hub is your ultimate online entertainment destination for trending videos and exclusive content.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pompomhub.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PomPom Hub",
+    "url": "https://pompomhub.online",
+    "sameAs": ["https://pompomhub.com"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #0f0f18;
+      --surface: #14141f;
+      --rose: #ff2d6b;
+      --rose2: #ff6a95;
+      --gold: #ffd166;
+      --purple: #7b5ea7;
+      --text: #f0eaff;
+      --muted: #9993b0;
+      --card: #1a1a28;
+      --glow: rgba(255,45,107,0.35);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ── NOISE TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: linear-gradient(180deg, rgba(10,10,15,0.95) 0%, transparent 100%);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,45,107,0.08);
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      background: rgba(10,10,15,0.98);
+      box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none; letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 0.9rem;
+      font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase;
+      transition: color 0.3s; position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--rose); transform: scaleX(0);
+      transition: transform 0.3s; transform-origin: left;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--rose), #c4004f);
+      color: #fff !important; padding: 0.55rem 1.4rem;
+      border-radius: 50px; font-weight: 500 !important;
+      transition: all 0.3s !important; box-shadow: 0 0 20px var(--glow);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 35px var(--glow) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; padding: 8rem 2rem 4rem;
+      overflow: hidden;
+    }
+    .hero-orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); pointer-events: none;
+      animation: orb-float 8s ease-in-out infinite;
+    }
+    .orb1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,45,107,0.18) 0%, transparent 70%); top: -10%; left: -15%; animation-delay: 0s; }
+    .orb2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(123,94,167,0.15) 0%, transparent 70%); bottom: 0; right: -10%; animation-delay: -3s; }
+    .orb3 { width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,209,102,0.1) 0%, transparent 70%); top: 40%; left: 40%; animation-delay: -6s; }
+    @keyframes orb-float { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-30px) scale(1.05)} }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,45,107,0.12); border: 1px solid rgba(255,45,107,0.3);
+      border-radius: 50px; padding: 0.4rem 1rem; font-size: 0.8rem;
+      font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--rose2); margin-bottom: 2rem;
+      animation: fade-up 0.8s ease both;
+    }
+    .hero-badge span { width: 6px; height: 6px; background: var(--rose); border-radius: 50%; animation: pulse 2s ease infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 900;
+      line-height: 1.05; letter-spacing: -0.03em;
+      animation: fade-up 0.8s 0.15s ease both;
+      margin-bottom: 1.5rem;
+    }
+    h1 .gradient-text {
+      background: linear-gradient(135deg, var(--rose) 0%, var(--gold) 60%, var(--rose2) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-size: 200% auto; animation: gradient-move 4s linear infinite;
+    }
+    @keyframes gradient-move { 0%{background-position:0%} 100%{background-position:200%} }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--muted);
+      max-width: 600px; margin: 0 auto 3rem; line-height: 1.7;
+      animation: fade-up 0.8s 0.3s ease both;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      animation: fade-up 0.8s 0.45s ease both;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: linear-gradient(135deg, var(--rose), #c4004f);
+      color: #fff; text-decoration: none; padding: 1rem 2.4rem;
+      border-radius: 50px; font-weight: 500; font-size: 1rem;
+      box-shadow: 0 4px 30px var(--glow), 0 0 0 0 var(--glow);
+      transition: all 0.3s; position: relative; overflow: hidden;
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, #ff6a95, var(--rose));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 50px var(--glow); }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary span { position: relative; z-index: 1; }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid rgba(255,45,107,0.35); color: var(--rose2);
+      text-decoration: none; padding: 1rem 2.4rem; border-radius: 50px;
+      font-weight: 400; font-size: 1rem; transition: all 0.3s;
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { background: rgba(255,45,107,0.1); border-color: var(--rose); transform: translateY(-2px); }
+
+    @keyframes fade-up { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── STATS ── */
+    .stats {
+      display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap;
+      padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      animation: fade-up 0.8s 0.6s ease both;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .stat-label { color: var(--muted); font-size: 0.85rem; margin-top: 0.3rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── SECTION SHARED ── */
+    section { position: relative; padding: 6rem 4rem; }
+    .section-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; line-height: 1.1; margin-bottom: 1rem;
+    }
+    .section-sub { color: var(--muted); max-width: 500px; line-height: 1.7; margin-bottom: 3rem; }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin: 0 auto 3rem; }
+
+    /* ── FEATURES ── */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .feature-card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px; padding: 2.2rem;
+      transition: all 0.4s; position: relative; overflow: hidden;
+    }
+    .feature-card::before {
+      content: ''; position: absolute; inset: 0; opacity: 0;
+      background: radial-gradient(circle at top left, rgba(255,45,107,0.08), transparent 70%);
+      transition: opacity 0.4s;
+    }
+    .feature-card:hover { transform: translateY(-6px); border-color: rgba(255,45,107,0.25); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255,45,107,0.2), rgba(123,94,167,0.2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 1.4rem;
+      border: 1px solid rgba(255,45,107,0.2);
+    }
+    .feature-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 0.6rem; }
+    .feature-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── TRENDING ── */
+    .trending { background: var(--bg2); }
+    .trending-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.2rem; margin-top: 3rem;
+    }
+    .trend-card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px; overflow: hidden;
+      transition: all 0.3s; cursor: pointer; text-decoration: none; color: var(--text);
+      display: block;
+    }
+    .trend-card:hover { transform: translateY(-5px); border-color: rgba(255,45,107,0.3); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+    .trend-thumb {
+      height: 160px; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--surface), var(--card));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .trend-thumb .play-icon {
+      width: 50px; height: 50px; background: rgba(255,45,107,0.85);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(255,45,107,0.5);
+    }
+    .trend-card:hover .play-icon { transform: scale(1.15); background: var(--rose); }
+    .trend-badge {
+      position: absolute; top: 10px; left: 10px;
+      background: var(--rose); color: #fff; font-size: 0.7rem;
+      font-weight: 500; padding: 0.2rem 0.6rem; border-radius: 50px; text-transform: uppercase;
+    }
+    .trend-body { padding: 1.2rem; }
+    .trend-body h4 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; line-height: 1.4; }
+    .trend-meta { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.78rem; }
+
+    /* ── CATEGORIES ── */
+    .cats-grid {
+      display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.5rem;
+    }
+    .cat-pill {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted); text-decoration: none; padding: 0.6rem 1.3rem;
+      border-radius: 50px; font-size: 0.85rem; transition: all 0.3s;
+      white-space: nowrap;
+    }
+    .cat-pill:hover, .cat-pill.active {
+      background: rgba(255,45,107,0.15); border-color: var(--rose);
+      color: var(--rose2); transform: translateY(-2px);
+    }
+
+    /* ── BLOG ── */
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .blog-card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px; overflow: hidden;
+      transition: all 0.4s; text-decoration: none; color: var(--text); display: block;
+    }
+    .blog-card:hover { transform: translateY(-6px); border-color: rgba(255,45,107,0.25); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+    .blog-img {
+      height: 200px;
+      background: linear-gradient(135deg, #1a0d1f, #0f1a2e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; position: relative; overflow: hidden;
+    }
+    .blog-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.4));
+    }
+    .blog-tag {
+      position: absolute; bottom: 12px; left: 12px; z-index: 1;
+      background: var(--rose); color: #fff; font-size: 0.7rem;
+      font-weight: 500; padding: 0.2rem 0.7rem; border-radius: 50px;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .blog-body { padding: 1.5rem; }
+    .blog-date { color: var(--muted); font-size: 0.78rem; margin-bottom: 0.6rem; }
+    .blog-body h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; line-height: 1.4; margin-bottom: 0.6rem; }
+    .blog-body p { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+    .read-more { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--rose2); font-size: 0.85rem; margin-top: 1rem; }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center; padding: 8rem 2rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,45,107,0.12) 0%, transparent 70%);
+    }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 1.2rem; }
+    .cta-section p { color: var(--muted); max-width: 500px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 4rem 4rem 2rem;
+    }
+    .footer-top { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-top: 1rem; max-width: 260px; }
+    .footer-col h4 { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; color: var(--text); }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-col a { color: var(--muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--rose2); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { color: var(--muted); font-size: 0.82rem; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--rose2); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── MOBILE ── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); transition: all 0.3s; }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 4rem 1.5rem; }
+      .stats { gap: 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      footer { padding: 3rem 1.5rem 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: center; }
+    }
+
+    /* ── PROGRESS BAR ── */
+    #progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--rose), var(--gold)); z-index: 999; transition: width 0.1s; }
+
+    /* ── BACK TO TOP ── */
+    #back-top {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 48px; height: 48px; background: var(--rose);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.2rem; cursor: pointer; border: none;
+      opacity: 0; transform: translateY(20px); transition: all 0.3s;
+      box-shadow: 0 4px 20px var(--glow); z-index: 50;
+    }
+    #back-top.show { opacity: 1; transform: translateY(0); }
+    #back-top:hover { transform: translateY(-3px); box-shadow: 0 8px 30px var(--glow); }
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" class="logo">PomPom Hub</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="https://pompomhub.com" class="nav-cta" rel="noopener">Enter Site →</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+  <div style="position:relative;z-index:1;max-width:900px">
+    <div class="hero-badge"><span></span> #1 Entertainment Destination</div>
+    <h1>Welcome to<br><span class="gradient-text">PomPom Hub</span></h1>
+    <p class="hero-sub">Your ultimate online entertainment hub. Discover thousands of exclusive videos, trending content, and premium entertainment — all curated just for you.</p>
+    <div class="hero-actions">
+      <a href="https://pompomhub.com" class="btn-primary" rel="noopener">
+        <span>🔥 Enter PomPom Hub</span>
+      </a>
+      <a href="/blog/" class="btn-secondary">Read Our Blog →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-number" data-target="50000">0</div>
+    <div class="stat-label">Videos Available</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number" data-target="5000000">0</div>
+    <div class="stat-label">Monthly Visitors</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number" data-target="200">0</div>
+    <div class="stat-label">Categories</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number" data-target="99">0</div>
+    <div class="stat-label">% Free Content</div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="about">
+  <div class="section-label">Why PomPom Hub</div>
+  <div style="display:flex;gap:4rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="flex:1;min-width:280px">
+      <h2 class="section-title">The Best Entertainment<br>Hub Online</h2>
+      <p class="section-sub">PomPom Hub brings together the finest collection of entertainment content on the internet. Explore, discover, and enjoy.</p>
+      <a href="https://pompomhub.com" class="btn-primary" rel="noopener"><span>Explore PomPom Hub →</span></a>
+    </div>
+    <div class="features-grid reveal" style="flex:2;min-width:300px">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Stream and browse at blazing speeds. PomPom Hub is optimized for the fastest content delivery on every device.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Smart Discovery</h3>
+        <p>Our intelligent recommendation engine helps you find exactly what you're looking for — every single time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Safe & Secure</h3>
+        <p>Browse with confidence. PomPom Hub is safe, secure, and completely private with no tracking or data selling.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Works Everywhere</h3>
+        <p>Fully responsive on desktop, tablet, and mobile. Enjoy PomPom Hub on any device, anywhere, anytime.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3>Premium Quality</h3>
+        <p>HD and 4K content available. We curate only the highest quality videos and entertainment for our users.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <h3>100% Free</h3>
+        <p>No subscriptions, no paywalls. Everything on PomPom Hub is completely free to access and enjoy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING -->
+<section class="trending" id="trending">
+  <div class="text-center">
+    <div class="section-label">Hot Right Now</div>
+    <h2 class="section-title">Trending on PomPom Hub</h2>
+    <p class="section-sub">See what millions of users are watching right now on PomPom Hub — updated in real time.</p>
+  </div>
+  <div class="trending-grid reveal">
+    <a href="https://pompomhub.com" class="trend-card" rel="noopener">
+      <div class="trend-thumb" style="background:linear-gradient(135deg,#1a0830,#2d0a4a)">
+        <div class="play-icon">▶</div>
+        <span class="trend-badge">🔥 Hot</span>
+      </div>
+      <div class="trend-body">
+        <h4>Top Trending Content Today</h4>
+        <div class="trend-meta"><span>🔥 1.2M views</span><span>HD</span></div>
+      </div>
+    </a>
+    <a href="https://pompomhub.com" class="trend-card" rel="noopener">
+      <div class="trend-thumb" style="background:linear-gradient(135deg,#1a1a0a,#2a2000)">
+        <div class="play-icon">▶</div>
+        <span class="trend-badge">New</span>
+      </div>
+      <div class="trend-body">
+        <h4>Most Watched This Week</h4>
+        <div class="trend-meta"><span>👁 980K views</span><span>4K</span></div>
+      </div>
+    </a>
+    <a href="https://pompomhub.com" class="trend-card" rel="noopener">
+      <div class="trend-thumb" style="background:linear-gradient(135deg,#0a1a30,#001a3a)">
+        <div class="play-icon">▶</div>
+        <span class="trend-badge">Popular</span>
+      </div>
+      <div class="trend-body">
+        <h4>Editor's Pick — Must Watch</h4>
+        <div class="trend-meta"><span>⭐ 750K views</span><span>HD</span></div>
+      </div>
+    </a>
+    <a href="https://pompomhub.com" class="trend-card" rel="noopener">
+      <div class="trend-thumb" style="background:linear-gradient(135deg,#1a0a0a,#3a0010)">
+        <div class="play-icon">▶</div>
+        <span class="trend-badge">🔥 Hot</span>
+      </div>
+      <div class="trend-body">
+        <h4>Most Liked Content</h4>
+        <div class="trend-meta"><span>❤️ 620K views</span><span>HD</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="text-center">
+    <div class="section-label">Browse by Category</div>
+    <h2 class="section-title">Explore All Categories</h2>
+    <p class="section-sub">PomPom Hub has something for everyone. Find your favorite category and dive in.</p>
+  </div>
+  <div class="cats-grid reveal">
+    <a href="https://pompomhub.com" class="cat-pill active" rel="noopener">🔥 Trending</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">⭐ Top Rated</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🆕 New Releases</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">💎 Premium</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🌍 International</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🎭 Featured</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">📺 HD Videos</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🎬 4K Quality</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">💯 Most Viewed</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">❤️ Most Liked</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🎁 Exclusive</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🌟 Popular</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">👑 VIP Content</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🔎 Discover</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">📱 Mobile Friendly</a>
+    <a href="https://pompomhub.com" class="cat-pill" rel="noopener">🎯 Recommended</a>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="trending" id="blog">
+  <div class="text-center">
+    <div class="section-label">PomPom Hub Blog</div>
+    <h2 class="section-title">Latest Articles</h2>
+    <p class="section-sub">Tips, guides, and news from the world of online entertainment. Updated regularly by the PomPom Hub team.</p>
+  </div>
+  <div class="blog-grid reveal">
+    <a href="/blog/what-is-pompom-hub.html" class="blog-card">
+      <div class="blog-img" style="background:linear-gradient(135deg,#1a0830,#0d1a3a)">
+        🎬
+        <span class="blog-tag">Guide</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date">📅 June 2025</div>
+        <h3>What Is PomPom Hub? Everything You Need to Know</h3>
+        <p>PomPom Hub is one of the fastest-growing entertainment platforms online. Discover what makes it special.</p>
+        <div class="read-more">Read More →</div>
+      </div>
+    </a>
+    <a href="/blog/top-entertainment-sites.html" class="blog-card">
+      <div class="blog-img" style="background:linear-gradient(135deg,#0a1a2a,#1a2a0a)">
+        🏆
+        <span class="blog-tag">Top List</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date">📅 June 2025</div>
+        <h3>Top 10 Entertainment Sites in 2025 — PomPom Hub Leads</h3>
+        <p>We ranked the best entertainment websites of 2025. See where PomPom Hub stands and why users love it.</p>
+        <div class="read-more">Read More →</div>
+      </div>
+    </a>
+    <a href="/blog/pompom-hub-features.html" class="blog-card">
+      <div class="blog-img" style="background:linear-gradient(135deg,#1a0a00,#2a1500)">
+        ⚡
+        <span class="blog-tag">Features</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date">📅 May 2025</div>
+        <h3>PomPom Hub Features That Make It the Best in 2025</h3>
+        <p>From HD streaming to smart search — here's why PomPom Hub is the #1 choice for entertainment lovers.</p>
+        <div class="read-more">Read More →</div>
+      </div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:3rem">
+    <a href="/blog/" class="btn-secondary">View All Articles →</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-label">Ready to Explore?</div>
+  <h2>Start Watching on <span style="background:linear-gradient(135deg,var(--rose),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent">PomPom Hub</span></h2>
+  <p>Millions of users trust PomPom Hub for the best online entertainment. Join them today — it's completely free.</p>
+  <a href="https://pompomhub.com" class="btn-primary" rel="noopener" style="font-size:1.1rem;padding:1.1rem 2.8rem">
+    <span>🚀 Go to PomPom Hub</span>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="logo">PomPom Hub</a>
+      <p>Your ultimate online entertainment destination. Millions of free videos available 24/7 on PomPom Hub.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="https://pompomhub.com" rel="noopener">Main Site</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Content</h4>
+      <ul>
+        <li><a href="https://pompomhub.com" rel="noopener">Trending Videos</a></li>
+        <li><a href="https://pompomhub.com" rel="noopener">New Releases</a></li>
+        <li><a href="https://pompomhub.com" rel="noopener">Top Rated</a></li>
+        <li><a href="https://pompomhub.com" rel="noopener">HD Videos</a></li>
+        <li><a href="https://pompomhub.com" rel="noopener">4K Quality</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/dmca.html">DMCA</a></li>
+        <li><a href="/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 PomPom Hub. All rights reserved. | <a href="https://pompomhub.com" style="color:var(--rose2);text-decoration:none" rel="noopener">pompomhub.com</a></p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/dmca.html">DMCA</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+
+<script>
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const el = document.getElementById('progress');
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    el.style.width = pct + '%';
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+  });
+
+  document.getElementById('back-top').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Counter animation
+  function animateCounter(el, target) {
+    let start = 0;
+    const isM = target >= 1000000;
+    const isK = target >= 1000 && !isM;
+    const displayTarget = isM ? target/1000000 : isK ? target/1000 : target;
+    const suffix = isM ? 'M+' : isK ? 'K+' : '+';
+    const duration = 2000; const step = duration / 60;
+    const timer = setInterval(() => {
+      start += displayTarget / (duration / step);
+      if (start >= displayTarget) { el.textContent = displayTarget % 1 === 0 ? displayTarget + suffix : displayTarget.toFixed(1) + suffix; clearInterval(timer); return; }
+      el.textContent = (start % 1 === 0 ? Math.floor(start) : start.toFixed(1)) + suffix;
+    }, step);
+  }
+  const statsObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { document.querySelectorAll('[data-target]').forEach(el => animateCounter(el, +el.dataset.target)); statsObserver.disconnect(); } });
+  }, {threshold:0.5});
+  const statsEl = document.querySelector('.stats');
+  if(statsEl) statsObserver.observe(statsEl);
+</script>
+</body>
+</html>
